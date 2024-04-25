@@ -40,7 +40,7 @@ public class KeycloakController {
         return ResponseEntity.ok("User updated successfully");
     }
 
-    @PutMapping("/delete/{userId}")
+    @DeleteMapping("/delete/{userId}")
     public ResponseEntity<?> deleteUser(@PathVariable String userId){
         keycloakService.deleteUser(userId);
         return ResponseEntity.noContent().build();
